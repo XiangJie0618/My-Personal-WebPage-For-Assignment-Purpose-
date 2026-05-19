@@ -1,0 +1,35 @@
+@media (max-width: 768px){
+
+    /* ❗sidebar 不再占 300px（手机才改） */
+    .sidebar.active{
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* ❗不要横向挤爆 */
+    .main-layout{
+        flex-direction: column;
+    }
+
+    /* ❗按钮变大一点更好点 */
+    .tool-btn{
+        font-size: 16px;
+    }
+
+    /* ❗选择页面不要 absolute（手机容易乱） */
+    .selection-screen{
+        position: relative;
+        padding: 20px;
+    }
+
+    /* ❗iframe 高度限制 */
+    iframe{
+        height: 70vh;
+    }
+
+    /* ❗navbar 手机变直排 */
+    .navbar-nav{
+        flex-direction: column;
+        text-align: center;
+    }
+}
