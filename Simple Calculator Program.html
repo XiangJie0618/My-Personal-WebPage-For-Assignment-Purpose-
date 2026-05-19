@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Calculator Program</title>
+    </head>
+
+<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .main-content{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body{
+            background-color: #f1f1f1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .label{
+            font-weight: bold;
+            color: black;
+        }
+
+        .text{
+            font-size: 13px;
+            
+        }
+
+        input{
+            width: 100px;
+           text-align: center;
+           
+        }
+
+
+
+
+    </style>
+
+    <body>
+
+    <div class="main-content">
+        <div class="container" style="max-width: 600px;" >
+            <div class="card shadow border-0 rounded-4 px-5 py-5">
+
+                <div class="text-center bg-white">
+                    <h2 class="label">Simple Calculator Program</h2>
+                </div>
+
+            <div class="mb-3 d-flex justify-content-center align-item-center gap-2 bg-white" >
+                <label class="text">Please Enter Two Number and Select the Operation on the Two Numbers:</label><br>
+            </div>
+
+        <div class="mb-3 d-flex justify-content-center align-item-center gap-2">
+            <input type="number" id="num1"> 
+            <span id="symbol">?</span>
+            <input type="number" id="num2">
+            <span>=</span>
+            <input type="number" id="result" placeholder="result" readonly>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-center align-item-center gap-2">
+        <button class="btn btn-primary" style="width: 100px;" onclick="add()">Add</button>
+        <button class="btn btn-primary" style="width: 100px;" onclick="subtract()">Subtract</button>
+        <button class="btn btn-primary" style="width: 100px;" onclick="multiply()">Multiply</button>
+        <button class="btn btn-primary" style="width: 100px;" onclick="divide()">Divide</button>
+        </div>
+ 
+     </div>
+    </div>
+   </div>
+
+    <script>
+
+        function add() {
+
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let res = num1 + num2;
+
+            document.getElementById("symbol").innerHTML = "+";
+
+            document.getElementById("result").value = res;
+        }
+
+         function subtract() {
+
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let res = num1 - num2;
+
+            document.getElementById("symbol").innerHTML = "-";
+
+            document.getElementById("result").value = res;
+        }
+
+         function multiply() {
+
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let res = num1 * num2;
+
+            document.getElementById("symbol").innerHTML = "*";
+
+            document.getElementById("result").value = res;
+        }
+
+         function divide() {
+
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let res = num1 / num2;
+
+            document.getElementById("symbol").innerHTML = "/";
+
+            document.getElementById("result").value = res;
+        }
+       
+    </script>
+    </body>
+</html>
